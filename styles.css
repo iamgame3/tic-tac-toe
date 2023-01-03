@@ -10,6 +10,31 @@
 }
 
 .body-container {
+    display: flex;
+    justify-content: center;
     height: 90vh;
     background-color: rgb(150, 255, 255);
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(3, 128px);
+    grid-template-rows: repeat(3, 128px);
+    padding-top: 128px;
+}
+
+.bottom-left, .bottom-middle, .bottom-right {
+    border-top: 2px solid black;
+}
+
+.top-right, .middle-right, .bottom-right {
+    border-left: 2px solid black;
+}
+
+.top-left, .middle-left, .bottom-left {
+    border-right: 2px solid black;
+}
+
+.top-left, .top-middle, .top-right {
+    border-bottom: 2px solid black;
 }
