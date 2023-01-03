@@ -1,0 +1,15 @@
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    font-size: 36px;
+    padding-left: 32px;
+    background-color: #7fffd4;
+    box-shadow: 0 2px 8px rgb(150, 150, 150);
+}
+
+.body-container {
+    height: 90vh;
+    background-color: rgb(150, 255, 255);
+}
