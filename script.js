@@ -1,9 +1,3 @@
-const gameBoard = (() => {
-    const currentBoard = []
-    const gameBoxes = document.querySelectorAll('.game-square')
-    return {gameBoxes}
-})()
-
 const players = (uNameOne, uNameTwo) => {
     uNameOneTurn = true
     uNameTwoTurn = false
@@ -12,8 +6,10 @@ const players = (uNameOne, uNameTwo) => {
 
 const currentPlayers = players('John', 'Mary')
 
-const displayController = (() => {
-    gameBoard.gameBoxes.forEach(box => box.addEventListener('click', () => {
+const gameBoard = (() => {
+    const currentBoard = []
+    const gameBoxes = document.querySelectorAll('.game-square')
+    gameBoxes.forEach(box => box.addEventListener('click', () => {
         if (!box.textContent && uNameOneTurn) {
             box.textContent = 'X'
             uNameOneTurn = false
@@ -23,6 +19,6 @@ const displayController = (() => {
             uNameOneTurn = true
             uNameTwoTurn = false
         }
-    }));
+    }))
     return {uNameOneTurn, uNameTwoTurn}
 })()
