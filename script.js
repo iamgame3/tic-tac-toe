@@ -14,13 +14,11 @@ const currentPlayers = players('John', 'Mary')
 
 const displayController = (() => {
     gameBoard.gameBoxes.forEach(box => box.addEventListener('click', () => {
-        if (box.textContent) {
-            return
-        }   else if (uNameOneTurn) {
+        if (!box.textContent && uNameOneTurn) {
             box.textContent = 'X'
             uNameOneTurn = false
             uNameTwoTurn = true
-        }   else {
+        }   else if (!box.textContent && uNameTwoTurn) {
             box.textContent = 'O'
             uNameOneTurn = true
             uNameTwoTurn = false
