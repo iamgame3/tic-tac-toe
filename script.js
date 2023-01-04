@@ -1,18 +1,30 @@
 const gameBoard = (() => {
-    const currentBoard = ['X', 'O', '', '', '', '', 'X', '', 'O']
+    const currentBoard = []
     const gameBoxes = document.querySelectorAll('.game-square')
-    for (let i = 0; i < currentBoard.length; i += 1) {
-        gameBoxes[i].textContent = currentBoard[i]
-    }
-    return {}
+    return {gameBoxes}
 })()
+
+const players = (uNameOne, uNameTwo) => {
+    uNameOneTurn = true
+    uNameTwoTurn = false
+    return {uNameOneTurn, uNameTwoTurn}
+}
+
+const currentPlayers = players('John', 'Mary')
 
 const displayController = (() => {
-
-    return {}
+    gameBoard.gameBoxes.forEach(box => box.addEventListener('click', () => {
+        if (box.textContent) {
+            return
+        }   else if (uNameOneTurn) {
+            box.textContent = 'X'
+            uNameOneTurn = false
+            uNameTwoTurn = true
+        }   else {
+            box.textContent = 'O'
+            uNameOneTurn = true
+            uNameTwoTurn = false
+        }
+    }));
+    return {uNameOneTurn, uNameTwoTurn}
 })()
-
-const Player = () => {
-
-    return {}
-}
