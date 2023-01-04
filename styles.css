@@ -23,6 +23,13 @@
     padding-top: 128px;
 }
 
+.game-square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 124px;
+}
+
 .bottom-left, .bottom-middle, .bottom-right {
     border-top: 2px solid black;
 }
