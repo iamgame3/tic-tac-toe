@@ -14,7 +14,9 @@ const currentPlayers = players('John', 'Mary')
 // Create game board logic
 const gameBoard = (() => {
     // Make an array that represents the game board
-    const currentBoard = ['', '', '', '', '', '', '', '', '']
+    let currentBoard = ['', '', '', '', '', '', '', '', '']
+    // Select reset button
+    const resetButton = document.querySelector('.reset-button')
     // Select all game squares and make it a variable
     const gameSquares = document.querySelectorAll('.game-square')
     // Check if a square is filled in
@@ -96,6 +98,22 @@ const gameBoard = (() => {
             winCheck()
         }
     }))
+    // Clear winner and game board if reset button is clicked
+    resetButton.addEventListener('click', () => {
+        if (uNameOneWin === true) {
+            uNameOneTurn = false
+            uNameTwoTurn = true
+        } else if (uNameTwoWin === true) {
+            uNameOneTurn = true
+            uNameTwoTurn = false
+        }
+        uNameOneWin = false
+        uNameTwoWin = false
+        currentBoard = ['', '', '', '', '', '', '', '', '']
+        gameSquares.forEach(square => {
+            square.textContent = ''
+        })
+    })
     // Make updated player turns global
     return {uNameOneTurn, uNameTwoTurn}
 })()

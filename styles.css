@@ -1,3 +1,8 @@
+:root {
+    --aqua-green: rgb(127, 255, 212);
+    --light-aqua-green: rgb(169, 255, 226);
+}
+
 .header {
     position: relative;
     display: flex;
@@ -5,7 +10,7 @@
     height: 10vh;
     font-size: 36px;
     padding-left: 32px;
-    background-color: rgb(127, 255, 212);
+    background-color: var(--aqua-green);
     box-shadow: 0 2px 8px rgb(150, 150, 150);
 }
 
@@ -52,12 +57,12 @@ input[type='text'] {
     color: black;
     border: 1px solid black;
     border-radius: 4px;
-    background-color: rgb(127, 255, 212);
+    background-color: var(--aqua-green);
     cursor: pointer;
 }
 
 .confirm-button:active {
-    background-color: rgb(169, 255, 226);
+    background-color: var(--light-aqua-green);
 }
 
 .game-square {
@@ -81,4 +86,22 @@ input[type='text'] {
 
 .top-left, .top-middle, .top-right {
     border-bottom: 2px solid black;
+}
+
+.reset-button {
+    position: absolute;
+    top: 32vh;
+    right: -20vh;
+    height: 32px;
+    width: 128px;
+    font-size: 16px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: var(--aqua-green);
+    cursor: pointer;
+}
+
+.reset-button:active {
+    background-color: var(--light-aqua-green);
 }
