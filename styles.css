@@ -95,11 +95,18 @@ input[type='text'] {
     border-bottom: 2px solid black;
 }
 
-.reset-button {
+.misc-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
     position: absolute;
-    top: 32vh;
+    top: 24vh;
     right: -20vh;
-    height: 32px;
+}
+
+.reset-button, .bot-normal-button,
+.bot-impossible-button {
+    height: 48px;
     width: 128px;
     font-size: 16px;
     color: black;
@@ -109,7 +116,8 @@ input[type='text'] {
     cursor: pointer;
 }
 
-.reset-button:active {
+.reset-button:active, .bot-normal-button:active,
+.bot-impossible-button:active {
     background-color: var(--light-aqua-green);
 }
 
