@@ -39,8 +39,10 @@ const gameBoard = (() => {
     const squareCheck = (square) => square === 'X' || square === 'O'
     // Display win message
     const winMessage = (uNameOneW, uNameTwoW, uNameOne, uNameTwo) => {
+        // Create win display div
         const winDisplay = document.createElement('div')
         winDisplay.classList.add('win-display')
+        // Displays different message based on who won, or if it was a tie
         if (uNameOneW) {
             winDisplay.textContent = `${uNameOne} is the winner!`
         } else if (uNameTwoW) {
@@ -48,6 +50,7 @@ const gameBoard = (() => {
         } else {
             winDisplay.textContent = "Cat's game!"
         }
+        // Add finished display message to the page
         bodyContainer.appendChild(winDisplay)
     }
     // Reset the game board and game information
