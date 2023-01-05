@@ -11,15 +11,26 @@
     <div class="header">Tic Tac Toe</div>
     <div class="body-container">
         <div class="game-container">
-            <div class="top-left game-square" data-square-number="0"></div>
-            <div class="top-middle game-square" data-square-number="1"></div>
-            <div class="top-right game-square" data-square-number="2"></div>
-            <div class="middle-left game-square" data-square-number="3"></div>
-            <div class="middle-middle game-square" data-square-number="4"></div>
-            <div class="middle-right game-square" data-square-number="5"></div>
-            <div class="bottom-left game-square" data-square-number="6"></div>
-            <div class="bottom-middle game-square" data-square-number="7"></div>
-            <div class="bottom-right game-square" data-square-number="8"></div>
+          <form action="javascript:players();" class="u-name-form">
+            <div class="form-input">
+              <label for="uNameOne">Player One:</label>
+              <input type="text" name="uName" id="uNameOne" />
+            </div>
+            <div class="form-input">
+              <label for="uNameTwo">Player Two:</label>
+              <input type="text" name="uName" id="uNameTwo" />
+            </div>
+            <button type="submit" class="confirm-button">Confirm</button>
+          </form>
+          <div class="top-left game-square" data-square-number="0"></div>
+          <div class="top-middle game-square" data-square-number="1"></div>
+          <div class="top-right game-square" data-square-number="2"></div>
+          <div class="middle-left game-square" data-square-number="3"></div>
+          <div class="middle-middle game-square" data-square-number="4"></div>
+          <div class="middle-right game-square" data-square-number="5"></div>
+          <div class="bottom-left game-square" data-square-number="6"></div>
+          <div class="bottom-middle game-square" data-square-number="7"></div>
+          <div class="bottom-right game-square" data-square-number="8"></div>
         </div>
     </div>
 
