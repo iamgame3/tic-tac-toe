@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --aqua-green: rgb(127, 255, 212);
     --light-aqua-green: rgb(169, 255, 226);
+}
+
+p, h1, h2, h3, h4, h5, h6,
+div, label, input, button {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .header {
