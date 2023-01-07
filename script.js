@@ -28,7 +28,6 @@ const gameBoard = (() => {
     let tie = ''
     let botStatus = ''
     let botDiff = ''
-    const bestMove = ''
     let bestMoveFinal = ''
     // Make an array that represents the game board
     let currentBoard = ['', '', '', '', '', '', '', '', '']
