@@ -39,6 +39,7 @@ const gameBoard = (() => {
     // Select bot buttons
     const botNormalButton = document.querySelector('.bot-normal-button')
     const botImpossibleButton = document.querySelector('.bot-impossible-button')
+    const botOff = document.querySelector('.bot-off-button')
     // Select form confirm button
     const formConfirm = document.querySelector('.confirm-button')
     // Select all game squares and make it a variable
@@ -257,6 +258,7 @@ const gameBoard = (() => {
         gameReset()
         // Make the second player the bot
         document.getElementById('uNameTwo').value = `Bot (${bot})`
+        document.getElementById('uNameTwo').readOnly = true
         currentPlayers = players()
         botStatus = 'On'
         botDiff = bot
@@ -309,12 +311,20 @@ const gameBoard = (() => {
             }
         }
     }))
-    // Turn on bot when bot buttons are clicked
+    // Turn on bot when respective bot buttons are clicked
     botNormalButton.addEventListener('click', () => {
         botOn("Normal")
     })
     botImpossibleButton.addEventListener('click', () => {
         botOn("Impossible")
+    })
+    // Turn bot off when button is clicked
+    botOff.addEventListener('click', () => {
+        botStatus = 'Off'
+        document.getElementById('uNameTwo').value = ''
+        document.getElementById('uNameTwo').readOnly = false
+        currentPlayers = players()
+        gameReset()
     })
     // Clear winner and game board if reset button is clicked
     resetButton.addEventListener('click', gameReset)

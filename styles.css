@@ -100,12 +100,12 @@ input[type='text'] {
     flex-direction: column;
     gap: 32px;
     position: absolute;
-    top: 24vh;
+    top: 18vh;
     right: -20vh;
 }
 
 .reset-button, .bot-normal-button,
-.bot-impossible-button {
+.bot-impossible-button, .bot-off-button {
     height: 48px;
     width: 128px;
     font-size: 16px;
@@ -117,7 +117,7 @@ input[type='text'] {
 }
 
 .reset-button:active, .bot-normal-button:active,
-.bot-impossible-button:active {
+.bot-impossible-button:active, .bot-off-button:active {
     background-color: var(--light-aqua-green);
 }
 
